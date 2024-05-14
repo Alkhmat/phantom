@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1046953999095",
+    "project_id": "phantom-36299",
+    "storage_bucket": "phantom-36299.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1046953999095:android:4454475f397d35088ab1f2",
+        "android_client_info": {
+          "package_name": "com.example.phantom"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDYUMXm2BzQjlEzeb7CvAISDK36dMWWZOo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
