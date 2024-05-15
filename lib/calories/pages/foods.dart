@@ -139,6 +139,7 @@ class _FoodKkalState extends State<FoodKkal> {
                   return Container(
                     margin: const EdgeInsets.all(3),
                     height: h * 0.2,
+                    width: w * 0.2,
                     decoration: BoxDecoration(
                       color: Colors.white54,
                       borderRadius: BorderRadius.circular(15),
@@ -166,7 +167,7 @@ class _FoodKkalState extends State<FoodKkal> {
                           Column(
                             children: [
                               SizedBox(
-                                height: h * 0.16,
+                                height: h * 0.14,
                               ),
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
@@ -174,7 +175,9 @@ class _FoodKkalState extends State<FoodKkal> {
                                   IconButton(
                                     onPressed: onPressedAddkkal,
                                     style: IconButton.styleFrom(
-                                        backgroundColor: Colors.black54),
+                                        backgroundColor: Colors.black54,
+                                        minimumSize:
+                                            Size(w * 0.065, h * 0.065)),
                                     icon: Icon(
                                       Icons.add,
                                       color: Colors.white,
@@ -187,7 +190,9 @@ class _FoodKkalState extends State<FoodKkal> {
                                   IconButton(
                                     onPressed: onPressedRemovekkal,
                                     style: IconButton.styleFrom(
-                                        backgroundColor: Colors.black54),
+                                      backgroundColor: Colors.black54,
+                                      minimumSize: Size(w * 0.065, h * 0.065),
+                                    ),
                                     icon: Icon(
                                       Icons.remove,
                                       color: Colors.white,

@@ -51,24 +51,32 @@ class _RegisterViewState extends State<RegisterView> {
                           SizedBox(
                             height: h * 0.08,
                             width: w,
-                            child: ListView.builder(
-                              scrollDirection: Axis.horizontal,
-                              itemCount: string.auth.length,
-                              itemBuilder: (context, index) {
-                                return TextButton(
-                                  onPressed: () {
-                                    context
-                                        .read<ClickAuthCubit>()
-                                        .tapIndex(index);
+                            child: BlocBuilder<ClickAuthCubit, int>(
+                              builder: (context, state) {
+                                return ListView.builder(
+                                  scrollDirection: Axis.horizontal,
+                                  itemCount: string.auth.length,
+                                  itemBuilder: (context, index) {
+                                    return TextButton(
+                                      onPressed: () {
+                                        context
+                                            .read<ClickAuthCubit>()
+                                            .tapIndex(index);
+                                      },
+                                      child: Text(
+                                        string.auth[index],
+                                        style: GoogleFonts.teko(
+                                          textStyle: TextStyle(
+                                              color: state == index
+                                                  ? Colors.black87
+                                                  : Colors.grey.shade800,
+                                              fontSize: state == index
+                                                  ? h * 0.05
+                                                  : h * 0.047),
+                                        ),
+                                      ),
+                                    );
                                   },
-                                  child: Text(
-                                    string.auth[index],
-                                    style: GoogleFonts.teko(
-                                      textStyle: TextStyle(
-                                          color: Colors.black87,
-                                          fontSize: h * 0.045),
-                                    ),
-                                  ),
                                 );
                               },
                             ),

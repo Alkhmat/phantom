@@ -38,7 +38,7 @@ class _HomeViewState extends State<HomeView> {
               Row(
                 children: [
                   Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 10),
+                    padding: const EdgeInsets.symmetric(horizontal: 20),
                     child: Text(
                       AppText.hometext,
                       style: GoogleFonts.teko(

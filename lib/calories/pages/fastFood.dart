@@ -17,7 +17,7 @@ class _FastFoodKkalState extends State<FastFoodKkal> {
   @override
   void initState() {
     super.initState();
-    imageUrls = StorageService.loadImages('fast food');
+    imageUrls = StorageService.loadImages('fast_foods');
   }
 
   @override

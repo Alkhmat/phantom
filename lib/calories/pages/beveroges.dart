@@ -17,7 +17,7 @@ class _BevergesKkalState extends State<BevergesKkal> {
   @override
   void initState() {
     super.initState();
-    imageUrls = StorageService.loadImages('bevergas');
+    imageUrls = StorageService.loadImages('drinks');
   }
 
   @override

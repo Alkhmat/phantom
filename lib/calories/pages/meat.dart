@@ -17,7 +17,7 @@ class _MeatKkalState extends State<MeatKkal> {
   @override
   void initState() {
     super.initState();
-    imageUrls = StorageService.loadImages('meat');
+    imageUrls = StorageService.loadImages('meats');
   }
 
   @override
@@ -111,7 +111,7 @@ class _MeatKkalState extends State<MeatKkal> {
                           Column(
                             children: [
                               SizedBox(
-                                height: h * 0.11,
+                                height: h * 0.15,
                               ),
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
@@ -119,11 +119,11 @@ class _MeatKkalState extends State<MeatKkal> {
                                   IconButton(
                                     onPressed: onPressedAddkkal,
                                     style: IconButton.styleFrom(
-                                        backgroundColor: Colors.white60),
+                                        backgroundColor: Colors.black54),
                                     icon: Icon(
                                       Icons.add,
-                                      color: Colors.black,
-                                      size: h * 0.045,
+                                      color: Colors.white,
+                                      size: h * 0.06,
                                     ),
                                   ),
                                   SizedBox(
@@ -132,11 +132,11 @@ class _MeatKkalState extends State<MeatKkal> {
                                   IconButton(
                                     onPressed: onPressedRemovekkal,
                                     style: IconButton.styleFrom(
-                                        backgroundColor: Colors.white60),
+                                        backgroundColor: Colors.black54),
                                     icon: Icon(
                                       Icons.remove,
-                                      color: Colors.black,
-                                      size: h * 0.045,
+                                      color: Colors.white,
+                                      size: h * 0.06,
                                     ),
                                   ),
                                 ],

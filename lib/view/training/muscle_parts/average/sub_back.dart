@@ -35,7 +35,9 @@ class _SubBackAverageState extends State<SubBackAverage> {
 
     return SafeArea(
       child: Scaffold(
+        backgroundColor: Colors.white54,
         appBar: AppBar(
+          backgroundColor: Colors.white54,
           leading: IconButton(
             onPressed: () {
               Navigator.pop(context);

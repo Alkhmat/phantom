@@ -111,7 +111,7 @@ class _SweetKkalState extends State<SweetKkal> {
                           Column(
                             children: [
                               SizedBox(
-                                height: h * 0.13,
+                                height: h * 0.15,
                               ),
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
@@ -119,11 +119,11 @@ class _SweetKkalState extends State<SweetKkal> {
                                   IconButton(
                                     onPressed: onPressedAddkkal,
                                     style: IconButton.styleFrom(
-                                        backgroundColor: Colors.black54),
+                                        backgroundColor: Colors.white54),
                                     icon: Icon(
                                       Icons.add,
-                                      color: Colors.white,
-                                      size: h * 0.05,
+                                      color: Colors.black,
+                                      size: h * 0.06,
                                     ),
                                   ),
                                   SizedBox(
@@ -132,11 +132,11 @@ class _SweetKkalState extends State<SweetKkal> {
                                   IconButton(
                                     onPressed: onPressedRemovekkal,
                                     style: IconButton.styleFrom(
-                                        backgroundColor: Colors.black54),
+                                        backgroundColor: Colors.white54),
                                     icon: Icon(
                                       Icons.remove,
-                                      color: Colors.white,
-                                      size: h * 0.045,
+                                      color: Colors.black,
+                                      size: h * 0.06,
                                     ),
                                   ),
                                 ],
