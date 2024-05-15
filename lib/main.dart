@@ -11,6 +11,7 @@ import 'package:phantom/data/cubits/click_auth/clickAuth_cubit.dart';
 import 'package:phantom/data/cubits/photo_pickers/image_cubit.dart';
 import 'package:phantom/data/cubits/tap/tap_cubit.dart';
 import 'package:phantom/firebase_options.dart';
+import 'package:phantom/test_plan/start_plan/floor.dart';
 import 'package:phantom/view/home/home_view.dart';
 
 void main() async {

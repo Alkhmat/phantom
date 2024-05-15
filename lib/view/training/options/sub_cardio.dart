@@ -50,13 +50,14 @@ class _SubCardioPageState extends State<SubCardioPage> {
                       Padding(
                         padding: const EdgeInsets.symmetric(vertical: 15),
                         child: IconButton(
-                            onPressed: () {
-                              Navigator.pop(context);
-                            },
-                            icon: const Icon(
-                              Icons.arrow_back_ios,
-                              color: Colors.white,
-                            )),
+                          onPressed: () {
+                            Navigator.pop(context);
+                          },
+                          icon: const Icon(
+                            Icons.arrow_back_ios,
+                            color: Colors.white,
+                          ),
+                        ),
                       )
                     ],
                   ),
@@ -160,7 +161,7 @@ class _SubCardioPageState extends State<SubCardioPage> {
                                 ),
                                 child: Center(
                                   child: Text(
-                                    '1/2',
+                                    '1/0',
                                     style: GoogleFonts.teko(
                                       textStyle: TextStyle(
                                           color: Colors.black,
