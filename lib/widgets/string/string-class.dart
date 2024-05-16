@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+
 class StringClass {
   List<String> text1 = [
     'O  P  T  I  O  N  S  ',
@@ -44,9 +46,10 @@ class StringClass {
     'Sweet',
     'Meat',
   ];
-  List<String> icon1 = [
+  List<dynamic> icon1 = [
     'assets/images/2.png',
     'assets/images/3.png',
+    'assets/images/user.png',
   ];
   List<String> assets2 = [
     'assets/images/8.jpg',

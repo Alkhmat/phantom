@@ -7,6 +7,7 @@ import 'package:phantom/pages/average/muscle_avarge.dart';
 import 'package:phantom/pages/beginer/muscle_begimmer.dart';
 import 'package:phantom/pages/experienced/muscle_experienced.dart';
 import 'package:phantom/pages/more.dart';
+import 'package:phantom/view/auth/register/register_viuw.dart';
 import 'package:phantom/view/calories/kkal_view.dart';
 import 'package:phantom/view/save/save_view.dart';
 import 'package:phantom/widgets/string/string-class.dart';
@@ -109,6 +110,13 @@ class _HomeViewState extends State<HomeView> {
                               context,
                               MaterialPageRoute(
                                 builder: (context) => const SaveViuw(),
+                              ),
+                            );
+                          } else if (index == 2) {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const RegisterView(),
                               ),
                             );
                           }
