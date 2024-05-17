@@ -156,7 +156,7 @@ class _SubLegsExperinceState extends State<SubLegsExperince> {
                               ),
                               Container(
                                 height: h * 0.11,
-                                width: w * 0.3,
+                                width: w * 0.2,
                                 decoration: const BoxDecoration(
                                   color: Colors.white30,
                                   borderRadius: BorderRadius.only(

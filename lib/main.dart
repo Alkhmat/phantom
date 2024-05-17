@@ -2,7 +2,6 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:phantom/data/cubits/auth/register_cubit.dart';
-import 'package:phantom/data/cubits/bmi/bmi_cubit.dart';
 import 'package:phantom/data/cubits/calories/kkal/kkal_cubit.dart';
 import 'package:phantom/data/cubits/calories/kkal_tap/kkaltap_cunit.dart';
 import 'package:phantom/data/cubits/calories/save/saveKkla_cubit.dart';
@@ -11,7 +10,6 @@ import 'package:phantom/data/cubits/click_auth/clickAuth_cubit.dart';
 import 'package:phantom/data/cubits/photo_pickers/image_cubit.dart';
 import 'package:phantom/data/cubits/tap/tap_cubit.dart';
 import 'package:phantom/firebase_options.dart';
-import 'package:phantom/test_plan/start_plan/floor.dart';
 import 'package:phantom/view/home/home_view.dart';
 
 void main() async {
@@ -47,9 +45,9 @@ class Phantom extends StatelessWidget {
         BlocProvider(
           create: (context) => ClickCubit(),
         ),
-        BlocProvider(
-          create: (context) => BodyQuizCubit(),
-        ),
+        // BlocProvider(
+        //   create: (context) => BodyQuizCubit(),
+        // ),
         BlocProvider(
           create: (context) => ClickAuthCubit(),
         ),

@@ -36,7 +36,7 @@ class SignUp extends StatelessWidget {
             controller: emailController,
           ),
           CustomRegisterField(
-            labelText: 'password',
+            labelText: 'Create password',
             prefixIcon: const Icon(Icons.password_outlined),
             controller: passwordController,
           ),

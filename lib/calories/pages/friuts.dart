@@ -111,7 +111,7 @@ class _FruitsKkalState extends State<FruitsKkal> {
                           Column(
                             children: [
                               SizedBox(
-                                height: h * 0.1,
+                                height: h * 0.09,
                               ),
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
