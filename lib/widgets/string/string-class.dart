@@ -1,5 +1,3 @@
-import 'package:flutter/material.dart';
-
 class StringClass {
   List<String> text1 = [
     'O  P  T  I  O  N  S  ',
@@ -37,6 +35,16 @@ class StringClass {
     'L O S E   W E I G H T',
   ];
   List<String> text4 = [
+    'Foods',
+    'Beverages',
+    'Flour',
+    'Fast Foods',
+    'Vegetables',
+    'Fruits',
+    'Sweet',
+    'Meat',
+  ];
+  List<String> begchest = [
     'Foods',
     'Beverages',
     'Flour',

@@ -139,12 +139,14 @@ class _SubChestBeginnerState extends State<SubChestBeginner> {
                                 width: w * 0.02,
                               ),
                               Expanded(
-                                child: Text(
-                                  "data",
-                                  style: GoogleFonts.teko(
-                                    textStyle: TextStyle(
-                                        color: Colors.white70,
-                                        fontSize: h * 0.040),
+                                child: Center(
+                                  child: Text(
+                                    "data",
+                                    style: GoogleFonts.teko(
+                                      textStyle: TextStyle(
+                                          color: Colors.white70,
+                                          fontSize: h * 0.040),
+                                    ),
                                   ),
                                 ),
                               ),

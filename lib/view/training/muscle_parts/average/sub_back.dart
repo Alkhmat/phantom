@@ -1,5 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:phantom/data/service/storage/storage_service.dart';
 
@@ -140,12 +141,16 @@ class _SubBackAverageState extends State<SubBackAverage> {
                               SizedBox(
                                 width: w * 0.1,
                               ),
-                              Text(
-                                "data",
-                                style: GoogleFonts.teko(
-                                  textStyle: TextStyle(
-                                      color: Colors.white70,
-                                      fontSize: h * 0.040),
+                              Expanded(
+                                child: Center(
+                                  child: Text(
+                                    "data",
+                                    style: GoogleFonts.teko(
+                                      textStyle: TextStyle(
+                                          color: Colors.white70,
+                                          fontSize: h * 0.040),
+                                    ),
+                                  ),
                                 ),
                               ),
                               SizedBox(
