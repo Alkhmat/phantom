@@ -163,7 +163,7 @@ class _FastFoodKkalState extends State<FastFoodKkal> {
                                     icon: Icon(
                                       Icons.add,
                                       color: Colors.white,
-                                      size: h * 0.06,
+                                      size: h * 0.05,
                                     ),
                                   ),
                                   SizedBox(
@@ -176,7 +176,7 @@ class _FastFoodKkalState extends State<FastFoodKkal> {
                                     icon: Icon(
                                       Icons.remove,
                                       color: Colors.white,
-                                      size: h * 0.06,
+                                      size: h * 0.05,
                                     ),
                                   ),
                                 ],
