@@ -45,7 +45,7 @@ class _FoodKkalState extends State<FoodKkal> {
               width: w,
               child: GridView.builder(
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2,
+                  crossAxisCount: 3,
                 ),
                 itemCount: imageUrls?.length ?? 0,
                 itemBuilder: (context, index) {
@@ -138,8 +138,6 @@ class _FoodKkalState extends State<FoodKkal> {
                   }
                   return Container(
                     margin: const EdgeInsets.all(3),
-                    height: h * 0.2,
-                    width: w * 0.2,
                     decoration: BoxDecoration(
                       color: Colors.white54,
                       borderRadius: BorderRadius.circular(15),
@@ -167,7 +165,7 @@ class _FoodKkalState extends State<FoodKkal> {
                           Column(
                             children: [
                               SizedBox(
-                                height: h * 0.14,
+                                height: h * 0.1,
                               ),
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
@@ -181,11 +179,11 @@ class _FoodKkalState extends State<FoodKkal> {
                                     icon: Icon(
                                       Icons.add,
                                       color: Colors.white,
-                                      size: h * 0.06,
+                                      size: h * 0.05,
                                     ),
                                   ),
                                   SizedBox(
-                                    width: w * 0.03,
+                                    width: w * 0.02,
                                   ),
                                   IconButton(
                                     onPressed: onPressedRemovekkal,
@@ -196,7 +194,7 @@ class _FoodKkalState extends State<FoodKkal> {
                                     icon: Icon(
                                       Icons.remove,
                                       color: Colors.white,
-                                      size: h * 0.06,
+                                      size: h * 0.05,
                                     ),
                                   ),
                                 ],

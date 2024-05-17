@@ -136,22 +136,24 @@ class _SubChestBeginnerState extends State<SubChestBeginner> {
                                 ),
                               ),
                               SizedBox(
-                                width: w * 0.1,
+                                width: w * 0.02,
                               ),
-                              Text(
-                                "data",
-                                style: GoogleFonts.teko(
-                                  textStyle: TextStyle(
-                                      color: Colors.white70,
-                                      fontSize: h * 0.040),
+                              Expanded(
+                                child: Text(
+                                  "data",
+                                  style: GoogleFonts.teko(
+                                    textStyle: TextStyle(
+                                        color: Colors.white70,
+                                        fontSize: h * 0.040),
+                                  ),
                                 ),
                               ),
                               SizedBox(
-                                width: w * 0.126,
+                                width: w * 0.02,
                               ),
                               Container(
                                 height: h * 0.11,
-                                width: w * 0.3,
+                                width: w * 0.2,
                                 decoration: const BoxDecoration(
                                   color: Colors.white30,
                                   borderRadius: BorderRadius.only(
@@ -165,7 +167,7 @@ class _SubChestBeginnerState extends State<SubChestBeginner> {
                                     style: GoogleFonts.teko(
                                       textStyle: TextStyle(
                                           color: Colors.black,
-                                          fontSize: h * 0.040),
+                                          fontSize: h * 0.030),
                                     ),
                                   ),
                                 ),

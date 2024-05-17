@@ -44,7 +44,7 @@ class _FLourKkalState extends State<FLourKkal> {
               width: w,
               child: GridView.builder(
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2,
+                  crossAxisCount: 3,
                 ),
                 itemCount: imageUrls?.length ?? 0,
                 itemBuilder: (context, index) {
@@ -121,7 +121,7 @@ class _FLourKkalState extends State<FLourKkal> {
                           Column(
                             children: [
                               SizedBox(
-                                height: h * 0.16,
+                                height: h * 0.1,
                               ),
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
@@ -133,21 +133,18 @@ class _FLourKkalState extends State<FLourKkal> {
                                     icon: Icon(
                                       Icons.add,
                                       color: Colors.white,
-                                      size: h * 0.06,
+                                      size: h * 0.05,
                                     ),
                                   ),
                                   SizedBox(
-                                    width: w * 0.03,
+                                    width: w * 0.02,
                                   ),
                                   IconButton(
                                     onPressed: onPressedRemovekkal,
                                     style: IconButton.styleFrom(
                                         backgroundColor: Colors.black54),
-                                    icon: Icon(
-                                      Icons.remove,
-                                      color: Colors.white,
-                                      size: h * 0.06,
-                                    ),
+                                    icon: Icon(Icons.remove,
+                                        color: Colors.white, size: h * 0.05),
                                   ),
                                 ],
                               ),

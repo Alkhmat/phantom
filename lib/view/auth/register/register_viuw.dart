@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:phantom/data/cubits/click_auth/clickAuth_cubit.dart';
 import 'package:phantom/pages/auth/sign_in/sign_in.dart';
 import 'package:phantom/pages/auth/sign_up/sign_up.dart';
+import 'package:phantom/view/home/home_view.dart';
 import 'package:phantom/widgets/string/string-class.dart';
 
 class RegisterView extends StatefulWidget {
@@ -95,6 +96,25 @@ class _RegisterViewState extends State<RegisterView> {
                             ),
                           ),
                         ],
+                      ),
+                    ),
+                  ),
+                  TextButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const HomeView(),
+                        ),
+                      );
+                    },
+                    child: Text(
+                      'Skip',
+                      style: GoogleFonts.teko(
+                        textStyle: const TextStyle(
+                          color: Colors.white,
+                          fontSize: 30,
+                        ),
                       ),
                     ),
                   ),

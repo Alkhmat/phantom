@@ -44,7 +44,7 @@ class _FastFoodKkalState extends State<FastFoodKkal> {
               width: w,
               child: GridView.builder(
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2,
+                  crossAxisCount: 3,
                 ),
                 itemCount: imageUrls?.length ?? 0,
                 itemBuilder: (context, index) {
@@ -151,7 +151,7 @@ class _FastFoodKkalState extends State<FastFoodKkal> {
                           Column(
                             children: [
                               SizedBox(
-                                height: h * 0.16,
+                                height: h * 0.1,
                               ),
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
@@ -167,7 +167,7 @@ class _FastFoodKkalState extends State<FastFoodKkal> {
                                     ),
                                   ),
                                   SizedBox(
-                                    width: w * 0.03,
+                                    width: w * 0.02,
                                   ),
                                   IconButton(
                                     onPressed: onPressedRemovekkal,

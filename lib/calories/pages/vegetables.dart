@@ -44,7 +44,7 @@ class _VegetablesKkalState extends State<VegetablesKkal> {
               width: w,
               child: GridView.builder(
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2,
+                  crossAxisCount: 3,
                 ),
                 itemCount: imageUrls?.length ?? 0,
                 itemBuilder: (context, index) {
@@ -161,7 +161,7 @@ class _VegetablesKkalState extends State<VegetablesKkal> {
                           Column(
                             children: [
                               SizedBox(
-                                height: h * 0.15,
+                                height: h * 0.1,
                               ),
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
@@ -173,7 +173,7 @@ class _VegetablesKkalState extends State<VegetablesKkal> {
                                     icon: Icon(
                                       Icons.add,
                                       color: Colors.white,
-                                      size: h * 0.06,
+                                      size: h * 0.05,
                                     ),
                                   ),
                                   SizedBox(
@@ -186,7 +186,7 @@ class _VegetablesKkalState extends State<VegetablesKkal> {
                                     icon: Icon(
                                       Icons.remove,
                                       color: Colors.white,
-                                      size: h * 0.06,
+                                      size: h * 0.05,
                                     ),
                                   ),
                                 ],

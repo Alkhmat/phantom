@@ -44,7 +44,7 @@ class _MeatKkalState extends State<MeatKkal> {
               width: w,
               child: GridView.builder(
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2,
+                  crossAxisCount: 3,
                 ),
                 itemCount: imageUrls?.length ?? 0,
                 itemBuilder: (context, index) {
@@ -111,7 +111,7 @@ class _MeatKkalState extends State<MeatKkal> {
                           Column(
                             children: [
                               SizedBox(
-                                height: h * 0.15,
+                                height: h * 0.1,
                               ),
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
@@ -123,7 +123,7 @@ class _MeatKkalState extends State<MeatKkal> {
                                     icon: Icon(
                                       Icons.add,
                                       color: Colors.white,
-                                      size: h * 0.06,
+                                      size: h * 0.05,
                                     ),
                                   ),
                                   SizedBox(
@@ -136,7 +136,7 @@ class _MeatKkalState extends State<MeatKkal> {
                                     icon: Icon(
                                       Icons.remove,
                                       color: Colors.white,
-                                      size: h * 0.06,
+                                      size: h * 0.05,
                                     ),
                                   ),
                                 ],
