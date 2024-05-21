@@ -1,8 +1,10 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+
 import 'package:google_fonts/google_fonts.dart';
 import 'package:phantom/data/service/storage/storage_service.dart';
+import 'package:phantom/pages/average/muscle_avarge.dart';
 
 class SubLegsBeginner extends StatefulWidget {
   const SubLegsBeginner({super.key});
@@ -136,23 +138,23 @@ class _SubLegsBeginnerState extends State<SubLegsBeginner> {
                                   ),
                                 ),
                               ),
-                              SizedBox(
-                                width: w * 0.1,
-                              ),
                               Expanded(
                                 child: Center(
-                                  child: Text(
-                                    "data",
-                                    style: GoogleFonts.teko(
-                                      textStyle: TextStyle(
-                                          color: Colors.white70,
-                                          fontSize: h * 0.040),
+                                  child: Padding(
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 5),
+                                    child: FittedBox(
+                                      child: Text(
+                                        string.beginnerleg[index],
+                                        style: GoogleFonts.teko(
+                                          textStyle: TextStyle(
+                                              color: Colors.white,
+                                              fontSize: h * 0.050),
+                                        ),
+                                      ),
                                     ),
                                   ),
                                 ),
-                              ),
-                              SizedBox(
-                                width: w * 0.126,
                               ),
                               Container(
                                 height: h * 0.11,
@@ -166,7 +168,7 @@ class _SubLegsBeginnerState extends State<SubLegsBeginner> {
                                 ),
                                 child: Center(
                                   child: Text(
-                                    '1/0',
+                                    string.beginnerlegnumber[index],
                                     style: GoogleFonts.teko(
                                       textStyle: TextStyle(
                                           color: Colors.black,

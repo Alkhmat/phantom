@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:phantom/data/service/storage/storage_service.dart';
+import 'package:phantom/pages/average/muscle_avarge.dart';
 
 class SubLegsAverage extends StatefulWidget {
   const SubLegsAverage({super.key});
@@ -17,13 +18,14 @@ class _SubLegsAverageState extends State<SubLegsAverage> {
   @override
   void initState() {
     super.initState();
-    imageUrls = StorageService.loadImages('cardio');
+    imageUrls = StorageService.loadImages('avaragelegs');
   }
 
   @override
   Widget build(BuildContext context) {
     final h = MediaQuery.of(context).size.height;
     final w = MediaQuery.of(context).size.width;
+
     return Scaffold(
       backgroundColor: Colors.black,
       body: SingleChildScrollView(
@@ -39,30 +41,24 @@ class _SubLegsAverageState extends State<SubLegsAverage> {
                   bottomRight: Radius.circular(30),
                 ),
                 image: DecorationImage(
-                    image: AssetImage(
-                      'assets/images/111.jpeg',
-                    ),
-                    fit: BoxFit.cover),
+                  image: AssetImage('assets/images/111.jpeg'),
+                  fit: BoxFit.cover,
+                ),
               ),
-              child: Column(
-                children: [
-                  Row(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.symmetric(vertical: 15),
-                        child: IconButton(
-                          onPressed: () {
-                            Navigator.pop(context);
-                          },
-                          icon: const Icon(
-                            Icons.arrow_back_ios,
-                            color: Colors.white,
-                          ),
-                        ),
-                      )
-                    ],
+              child: Align(
+                alignment: Alignment.topLeft,
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 15),
+                  child: IconButton(
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
+                    icon: const Icon(
+                      Icons.arrow_back_ios,
+                      color: Colors.white,
+                    ),
                   ),
-                ],
+                ),
               ),
             ),
             FutureBuilder<List<String>>(
@@ -79,9 +75,17 @@ class _SubLegsAverageState extends State<SubLegsAverage> {
                     ),
                   );
                 }
+                if (snapshot.hasError) {
+                  return const Center(
+                    child: Text(
+                      'Error loading images',
+                      style: TextStyle(color: Colors.red),
+                    ),
+                  );
+                }
                 final List<String>? imageUrls = snapshot.data;
                 return SizedBox(
-                  height: h * 0.7,
+                  height: h * 0.65,
                   width: w,
                   child: ListView.builder(
                     itemCount: imageUrls?.length ?? 0,
@@ -92,7 +96,6 @@ class _SubLegsAverageState extends State<SubLegsAverage> {
                             horizontal: 17, vertical: 5),
                         child: Container(
                           height: h * 0.11,
-                          width: w,
                           decoration: const BoxDecoration(
                             color: Colors.white24,
                             borderRadius: BorderRadius.only(
@@ -118,7 +121,7 @@ class _SubLegsAverageState extends State<SubLegsAverage> {
                                     topRight: Radius.circular(20),
                                   ),
                                   child: CachedNetworkImage(
-                                    fit: BoxFit.fill,
+                                    fit: BoxFit.cover,
                                     imageUrl: imageUrl,
                                     placeholder: (context, url) => const Center(
                                       child: CircularProgressIndicator(
@@ -136,23 +139,24 @@ class _SubLegsAverageState extends State<SubLegsAverage> {
                                   ),
                                 ),
                               ),
-                              SizedBox(
-                                width: w * 0.1,
-                              ),
                               Expanded(
                                 child: Center(
-                                  child: Text(
-                                    "data",
-                                    style: GoogleFonts.teko(
-                                      textStyle: TextStyle(
-                                          color: Colors.white70,
-                                          fontSize: h * 0.040),
+                                  child: Padding(
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 5),
+                                    child: FittedBox(
+                                      child: Text(
+                                        string.avarageleg[index],
+                                        style: GoogleFonts.teko(
+                                          textStyle: TextStyle(
+                                            color: Colors.white70,
+                                            fontSize: h * 0.022,
+                                          ),
+                                        ),
+                                      ),
                                     ),
                                   ),
                                 ),
-                              ),
-                              SizedBox(
-                                width: w * 0.126,
                               ),
                               Container(
                                 height: h * 0.11,
@@ -165,12 +169,18 @@ class _SubLegsAverageState extends State<SubLegsAverage> {
                                   ),
                                 ),
                                 child: Center(
-                                  child: Text(
-                                    '1/0',
-                                    style: GoogleFonts.teko(
-                                      textStyle: TextStyle(
-                                          color: Colors.black,
-                                          fontSize: h * 0.040),
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: FittedBox(
+                                      child: Text(
+                                        string.avaragelegnumber[index],
+                                        style: GoogleFonts.teko(
+                                          textStyle: TextStyle(
+                                            color: Colors.black,
+                                            fontSize: h * 0.040,
+                                          ),
+                                        ),
+                                      ),
                                     ),
                                   ),
                                 ),

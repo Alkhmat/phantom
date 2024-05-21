@@ -24,7 +24,6 @@ class SaveKkalCubit extends Cubit<SaveKkalState> {
       emit(PersonUpdateState(
           listPerson)); // Эмитируем состояние с обновленным списком
     } catch (e) {
-      // Обработайте ошибку, если не удается добавить данные в Firestore
       print('Ошибка при добавлении данных в Firestore: $e');
     }
   }

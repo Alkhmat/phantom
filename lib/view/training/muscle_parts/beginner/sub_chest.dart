@@ -2,6 +2,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:phantom/data/service/storage/storage_service.dart';
+import 'package:phantom/pages/average/muscle_avarge.dart';
 
 class SubChestBeginner extends StatefulWidget {
   const SubChestBeginner({super.key});
@@ -16,7 +17,7 @@ class _SubChestBeginnerState extends State<SubChestBeginner> {
   @override
   void initState() {
     super.initState();
-    imageUrls = StorageService.loadImages('cardio');
+    imageUrls = StorageService.loadImages('chestbeginner');
   }
 
   @override
@@ -80,7 +81,7 @@ class _SubChestBeginnerState extends State<SubChestBeginner> {
                 }
                 final List<String>? imageUrls = snapshot.data;
                 return SizedBox(
-                  height: h * 0.7,
+                  height: h * 0.65,
                   width: w,
                   child: ListView.builder(
                     itemCount: imageUrls?.length ?? 0,
@@ -140,12 +141,14 @@ class _SubChestBeginnerState extends State<SubChestBeginner> {
                               ),
                               Expanded(
                                 child: Center(
-                                  child: Text(
-                                    "data",
-                                    style: GoogleFonts.teko(
-                                      textStyle: TextStyle(
-                                          color: Colors.white70,
-                                          fontSize: h * 0.040),
+                                  child: FittedBox(
+                                    child: Text(
+                                      string.beginnerchest[index],
+                                      style: GoogleFonts.teko(
+                                        textStyle: TextStyle(
+                                            color: Colors.white,
+                                            fontSize: h * 0.040),
+                                      ),
                                     ),
                                   ),
                                 ),
@@ -165,7 +168,7 @@ class _SubChestBeginnerState extends State<SubChestBeginner> {
                                 ),
                                 child: Center(
                                   child: Text(
-                                    '1/0',
+                                    string.beginnerchestnumber[index],
                                     style: GoogleFonts.teko(
                                       textStyle: TextStyle(
                                           color: Colors.black,
