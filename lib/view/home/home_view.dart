@@ -80,7 +80,7 @@ class _HomeViewState extends State<HomeView> {
                       AppText.firctoptions,
                       style: GoogleFonts.teko(
                           textStyle: TextStyle(
-                              color: Colors.white, fontSize: h * 0.035)),
+                              color: Colors.white, fontSize: h * 0.04)),
                     ),
                   ),
                 ],
@@ -154,7 +154,7 @@ class _HomeViewState extends State<HomeView> {
                       AppText.options,
                       style: GoogleFonts.teko(
                           textStyle: TextStyle(
-                              color: Colors.white, fontSize: h * 0.037)),
+                              color: Colors.white, fontSize: h * 0.04)),
                     ),
                   )
                 ],
@@ -165,11 +165,13 @@ class _HomeViewState extends State<HomeView> {
                   Padding(
                     padding:
                         const EdgeInsets.symmetric(horizontal: 18, vertical: 6),
-                    child: Text(
-                      AppText.secondoptions,
-                      style: GoogleFonts.teko(
-                          textStyle: TextStyle(
-                              color: Colors.white, fontSize: h * 0.035)),
+                    child: FittedBox(
+                      child: Text(
+                        AppText.secondoptions,
+                        style: GoogleFonts.teko(
+                            textStyle: TextStyle(
+                                color: Colors.white, fontSize: h * 0.04)),
+                      ),
                     ),
                   ),
                 ],
@@ -202,14 +204,16 @@ class _HomeViewState extends State<HomeView> {
                                       state == index ? 30 : 20)),
                               child: Center(
                                 child: FittedBox(
-                                  child: Text(string.text5[index],
-                                      style: GoogleFonts.teko(
-                                        textStyle: TextStyle(
-                                            color: state == index
-                                                ? Colors.black
-                                                : Colors.white,
-                                            fontSize: h * 0.025),
-                                      )),
+                                  child: Text(
+                                    string.text5[index],
+                                    style: GoogleFonts.teko(
+                                      textStyle: TextStyle(
+                                          color: state == index
+                                              ? Colors.black
+                                              : Colors.white,
+                                          fontSize: h * 0.025),
+                                    ),
+                                  ),
                                 ),
                               ),
                             ),

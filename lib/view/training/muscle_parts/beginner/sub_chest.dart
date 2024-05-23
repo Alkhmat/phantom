@@ -167,12 +167,18 @@ class _SubChestBeginnerState extends State<SubChestBeginner> {
                                   ),
                                 ),
                                 child: Center(
-                                  child: Text(
-                                    string.beginnerchestnumber[index],
-                                    style: GoogleFonts.teko(
-                                      textStyle: TextStyle(
-                                          color: Colors.black,
-                                          fontSize: h * 0.030),
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: FittedBox(
+                                      child: Text(
+                                        string.beginnerchestnumber[index],
+                                        style: GoogleFonts.teko(
+                                          textStyle: TextStyle(
+                                              color: Colors.black,
+                                              fontSize: h * 0.030,
+                                              fontWeight: FontWeight.normal),
+                                        ),
+                                      ),
                                     ),
                                   ),
                                 ),

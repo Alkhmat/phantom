@@ -1,5 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:phantom/data/service/storage/storage_service.dart';
 
@@ -46,6 +47,7 @@ class _SubCardioPageState extends State<SubCardioPage> {
               child: Column(
                 children: [
                   Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Padding(
                         padding: const EdgeInsets.symmetric(vertical: 15),
@@ -58,7 +60,21 @@ class _SubCardioPageState extends State<SubCardioPage> {
                             color: Colors.white,
                           ),
                         ),
-                      )
+                      ),
+                      IconButton(
+                          onPressed: () async {
+                            await showDialog(
+                              context: context,
+                              builder: (context) {
+                                return const AlertDialog();
+                              },
+                            );
+                          },
+                          icon: Icon(
+                            Icons.info_outline,
+                            color: Colors.white,
+                            size: h * 0.035,
+                          ))
                     ],
                   ),
                 ],
@@ -80,7 +96,7 @@ class _SubCardioPageState extends State<SubCardioPage> {
                 }
                 final List<String>? imageUrls = snapshot.data;
                 return SizedBox(
-                  height: h * 0.7,
+                  height: h * 0.65,
                   width: w,
                   child: ListView.builder(
                     itemCount: imageUrls?.length ?? 0,
@@ -138,12 +154,16 @@ class _SubCardioPageState extends State<SubCardioPage> {
                               SizedBox(
                                 width: w * 0.1,
                               ),
-                              Text(
-                                "data",
-                                style: GoogleFonts.teko(
-                                  textStyle: TextStyle(
-                                      color: Colors.white70,
-                                      fontSize: h * 0.040),
+                              Expanded(
+                                child: Center(
+                                  child: Text(
+                                    "data",
+                                    style: GoogleFonts.teko(
+                                      textStyle: TextStyle(
+                                          color: Colors.white70,
+                                          fontSize: h * 0.040),
+                                    ),
+                                  ),
                                 ),
                               ),
                               SizedBox(
@@ -151,7 +171,7 @@ class _SubCardioPageState extends State<SubCardioPage> {
                               ),
                               Container(
                                 height: h * 0.11,
-                                width: w * 0.3,
+                                width: w * 0.2,
                                 decoration: const BoxDecoration(
                                   color: Colors.white30,
                                   borderRadius: BorderRadius.only(

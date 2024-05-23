@@ -176,9 +176,9 @@ class _SubLegsAverageState extends State<SubLegsAverage> {
                                         string.avaragelegnumber[index],
                                         style: GoogleFonts.teko(
                                           textStyle: TextStyle(
-                                            color: Colors.black,
-                                            fontSize: h * 0.040,
-                                          ),
+                                              color: Colors.black,
+                                              fontSize: h * 0.030,
+                                              fontWeight: FontWeight.normal),
                                         ),
                                       ),
                                     ),

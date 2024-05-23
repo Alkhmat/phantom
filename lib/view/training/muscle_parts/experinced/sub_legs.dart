@@ -1,8 +1,8 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:phantom/data/service/storage/storage_service.dart';
+import 'package:phantom/pages/average/muscle_avarge.dart';
 
 class SubLegsExperince extends StatefulWidget {
   const SubLegsExperince({super.key});
@@ -17,7 +17,7 @@ class _SubLegsExperinceState extends State<SubLegsExperince> {
   @override
   void initState() {
     super.initState();
-    imageUrls = StorageService.loadImages('cardio');
+    imageUrls = StorageService.loadImages('experiencelegs');
   }
 
   @override
@@ -81,7 +81,7 @@ class _SubLegsExperinceState extends State<SubLegsExperince> {
                 }
                 final List<String>? imageUrls = snapshot.data;
                 return SizedBox(
-                  height: h * 0.7,
+                  height: h * 0.65,
                   width: w,
                   child: ListView.builder(
                     itemCount: imageUrls?.length ?? 0,
@@ -136,23 +136,23 @@ class _SubLegsExperinceState extends State<SubLegsExperince> {
                                   ),
                                 ),
                               ),
-                              SizedBox(
-                                width: w * 0.1,
-                              ),
                               Expanded(
                                 child: Center(
-                                  child: Text(
-                                    "data",
-                                    style: GoogleFonts.teko(
-                                      textStyle: TextStyle(
-                                          color: Colors.white70,
-                                          fontSize: h * 0.040),
+                                  child: Padding(
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 5),
+                                    child: FittedBox(
+                                      child: Text(
+                                        string.experienceleg[index],
+                                        style: GoogleFonts.teko(
+                                          textStyle: TextStyle(
+                                              color: Colors.white70,
+                                              fontSize: h * 0.040),
+                                        ),
+                                      ),
                                     ),
                                   ),
                                 ),
-                              ),
-                              SizedBox(
-                                width: w * 0.126,
                               ),
                               Container(
                                 height: h * 0.11,
@@ -165,12 +165,18 @@ class _SubLegsExperinceState extends State<SubLegsExperince> {
                                   ),
                                 ),
                                 child: Center(
-                                  child: Text(
-                                    '1/0',
-                                    style: GoogleFonts.teko(
-                                      textStyle: TextStyle(
-                                          color: Colors.black,
-                                          fontSize: h * 0.040),
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: FittedBox(
+                                      child: Text(
+                                        string.experiencelegnumber[index],
+                                        style: GoogleFonts.teko(
+                                          textStyle: TextStyle(
+                                              color: Colors.black,
+                                              fontSize: h * 0.030,
+                                              fontWeight: FontWeight.normal),
+                                        ),
+                                      ),
                                     ),
                                   ),
                                 ),

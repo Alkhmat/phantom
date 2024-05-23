@@ -172,7 +172,8 @@ class _SubPressBeginnerState extends State<SubPressBeginner> {
                                       style: GoogleFonts.teko(
                                         textStyle: TextStyle(
                                             color: Colors.black,
-                                            fontSize: h * 0.040),
+                                            fontSize: h * 0.030,
+                                            fontWeight: FontWeight.normal),
                                       ),
                                     ),
                                   ),

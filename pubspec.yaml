@@ -40,6 +40,7 @@ dependencies:
   firebase_auth: ^4.19.4
   firebase_core: ^2.30.1
   firebase_storage: ^11.7.4
+  firebase_app_check: ^0.2.2+6
   #state managment
   flutter_bloc: ^8.1.5
   #else
