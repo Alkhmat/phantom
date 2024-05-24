@@ -40,7 +40,7 @@ class _SubPressExperinceState extends State<SubPressExperince> {
                 ),
                 image: DecorationImage(
                     image: AssetImage(
-                      'assets/images/chest.jpeg',
+                      'assets/images/1.jpg',
                     ),
                     fit: BoxFit.cover),
               ),
@@ -78,39 +78,15 @@ class _SubPressExperinceState extends State<SubPressExperince> {
                       ),
                     ),
                   );
-                } else if (snapshot.hasError) {
-                  return const Center(
-                    child: Text(
-                      'Error loading images',
-                      style: TextStyle(color: Colors.white),
-                    ),
-                  );
                 }
                 final List<String>? imageUrls = snapshot.data;
-                if (imageUrls == null || imageUrls.isEmpty) {
-                  return const Center(
-                    child: Text(
-                      'No images found',
-                      style: TextStyle(color: Colors.white),
-                    ),
-                  );
-                }
                 return SizedBox(
                   height: h * 0.65,
                   width: w,
                   child: ListView.builder(
-                    itemCount: imageUrls.length,
+                    itemCount: imageUrls?.length ?? 0,
                     itemBuilder: (context, index) {
-                      final imageUrl = imageUrls[index];
-                      final experiencePressText =
-                          (index < string.experiencepress.length)
-                              ? string.experiencepress[index]
-                              : 'N/A';
-                      final experiencePressNumber =
-                          (index < string.experiencepressnumber.length)
-                              ? string.experiencepressnumber[index]
-                              : 'N/A';
-
+                      final imageUrl = imageUrls![index];
                       return Padding(
                         padding: const EdgeInsets.symmetric(
                             horizontal: 17, vertical: 5),
@@ -164,41 +140,14 @@ class _SubPressExperinceState extends State<SubPressExperince> {
                                 child: Center(
                                   child: Padding(
                                     padding: const EdgeInsets.symmetric(
-                                        horizontal: 1),
+                                        horizontal: 5),
                                     child: FittedBox(
                                       child: Text(
-                                        experiencePressText,
+                                        string.experiencechest[index],
                                         style: GoogleFonts.teko(
                                           textStyle: TextStyle(
                                               color: Colors.white70,
                                               fontSize: h * 0.040),
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                              ),
-                              Container(
-                                height: h * 0.11,
-                                width: w * 0.2,
-                                decoration: const BoxDecoration(
-                                  color: Colors.white30,
-                                  borderRadius: BorderRadius.only(
-                                    topRight: Radius.circular(20),
-                                    bottomLeft: Radius.circular(20),
-                                  ),
-                                ),
-                                child: Center(
-                                  child: Padding(
-                                    padding: const EdgeInsets.all(8.0),
-                                    child: FittedBox(
-                                      child: Text(
-                                        experiencePressNumber,
-                                        style: GoogleFonts.teko(
-                                          textStyle: TextStyle(
-                                              color: Colors.black,
-                                              fontSize: h * 0.030,
-                                              fontWeight: FontWeight.normal),
                                         ),
                                       ),
                                     ),

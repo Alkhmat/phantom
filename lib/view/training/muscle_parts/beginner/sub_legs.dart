@@ -156,28 +156,6 @@ class _SubLegsBeginnerState extends State<SubLegsBeginner> {
                                   ),
                                 ),
                               ),
-                              Container(
-                                height: h * 0.11,
-                                width: w * 0.2,
-                                decoration: const BoxDecoration(
-                                  color: Colors.white30,
-                                  borderRadius: BorderRadius.only(
-                                    topRight: Radius.circular(20),
-                                    bottomLeft: Radius.circular(20),
-                                  ),
-                                ),
-                                child: Center(
-                                  child: Text(
-                                    string.beginnerlegnumber[index],
-                                    style: GoogleFonts.teko(
-                                      textStyle: TextStyle(
-                                          color: Colors.black,
-                                          fontSize: h * 0.030,
-                                          fontWeight: FontWeight.normal),
-                                    ),
-                                  ),
-                                ),
-                              ),
                             ],
                           ),
                         ),

@@ -156,33 +156,6 @@ class _SubChestBeginnerState extends State<SubChestBeginner> {
                               SizedBox(
                                 width: w * 0.02,
                               ),
-                              Container(
-                                height: h * 0.11,
-                                width: w * 0.2,
-                                decoration: const BoxDecoration(
-                                  color: Colors.white30,
-                                  borderRadius: BorderRadius.only(
-                                    topRight: Radius.circular(20),
-                                    bottomLeft: Radius.circular(20),
-                                  ),
-                                ),
-                                child: Center(
-                                  child: Padding(
-                                    padding: const EdgeInsets.all(8.0),
-                                    child: FittedBox(
-                                      child: Text(
-                                        string.beginnerchestnumber[index],
-                                        style: GoogleFonts.teko(
-                                          textStyle: TextStyle(
-                                              color: Colors.black,
-                                              fontSize: h * 0.030,
-                                              fontWeight: FontWeight.normal),
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                              ),
                             ],
                           ),
                         ),

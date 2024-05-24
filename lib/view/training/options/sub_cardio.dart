@@ -187,27 +187,27 @@ class _SubCardioPageState extends State<SubCardioPage> {
                                   ),
                                 ),
                               ),
-                              Container(
-                                height: h * 0.11,
-                                width: w * 0.2,
-                                decoration: const BoxDecoration(
-                                  color: Colors.white30,
-                                  borderRadius: BorderRadius.only(
-                                    topRight: Radius.circular(20),
-                                    bottomLeft: Radius.circular(20),
-                                  ),
-                                ),
-                                child: Center(
-                                  child: Text(
-                                    string.cardionumber[index],
-                                    style: GoogleFonts.teko(
-                                      textStyle: TextStyle(
-                                          color: Colors.black,
-                                          fontSize: h * 0.040),
-                                    ),
-                                  ),
-                                ),
-                              ),
+                              // Container(
+                              //   height: h * 0.11,
+                              //   width: w * 0.2,
+                              //   decoration: const BoxDecoration(
+                              //     color: Colors.white30,
+                              //     borderRadius: BorderRadius.only(
+                              //       topRight: Radius.circular(20),
+                              //       bottomLeft: Radius.circular(20),
+                              //     ),
+                              //   ),
+                              //   child: Center(
+                              //     child: Text(
+                              //       string.cardionumber[index],
+                              //       style: GoogleFonts.teko(
+                              //         textStyle: TextStyle(
+                              //             color: Colors.black,
+                              //             fontSize: h * 0.040),
+                              //       ),
+                              //     ),
+                              //   ),
+                              // ),
                             ],
                           ),
                         ),
@@ -243,7 +243,7 @@ class _SubCardioPageState extends State<SubCardioPage> {
                 textStyle: TextStyle(color: Colors.black, fontSize: h * 0.030),
               ),
             ),
-            backgroundColor: Colors.white,
+            backgroundColor: Colors.white70,
           );
         },
       ),
