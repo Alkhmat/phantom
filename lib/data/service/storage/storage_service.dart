@@ -9,13 +9,11 @@ class StorageService {
       final ListResult result = await ref.listAll();
 
       // Преобразуем список объектов в список URL-адресов изображений
-      List<String> imageUrls = [];
-      for (final Reference reference in result.items) {
-        String imageUrl = await reference.getDownloadURL();
-        imageUrls.add(imageUrl);
-      }
+      final List<String> urls = await Future.wait(
+        result.items.map((Reference ref) => ref.getDownloadURL()).toList(),
+      );
 
-      return imageUrls;
+      return urls;
     } catch (e) {
       print("Error loading images: $e");
       return [];

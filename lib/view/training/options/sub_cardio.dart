@@ -1,7 +1,9 @@
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:phantom/data/service/storage/storage_service.dart';
+import 'package:phantom/view/training/splash/training_splash.dart';
+import 'package:phantom/widgets/string/string-class.dart';
 
 class SubCardioPage extends StatefulWidget {
   const SubCardioPage({super.key});
@@ -19,8 +21,23 @@ class _SubCardioPageState extends State<SubCardioPage> {
     imageUrls = StorageService.loadImages('cardio');
   }
 
+  void startTraining(List<String> imageUrls, List<String> exerciseNames,
+      List<String> exerciseNumbers) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => TrainStartView(
+          imageUrls: imageUrls,
+          exerciseNames: exerciseNames,
+          exerciseNumbers: exerciseNumbers,
+        ),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
+    final string = StringClass();
     final h = MediaQuery.of(context).size.height;
     final w = MediaQuery.of(context).size.width;
     return Scaffold(
@@ -94,13 +111,16 @@ class _SubCardioPageState extends State<SubCardioPage> {
                   );
                 }
                 final List<String>? imageUrls = snapshot.data;
+                if (imageUrls == null) {
+                  return const Center(child: Text('Error loading images'));
+                }
                 return SizedBox(
                   height: h * 0.65,
                   width: w,
                   child: ListView.builder(
-                    itemCount: imageUrls?.length ?? 0,
+                    itemCount: imageUrls.length,
                     itemBuilder: (context, index) {
-                      final imageUrl = imageUrls![index];
+                      final imageUrl = imageUrls[index];
                       return Padding(
                         padding: const EdgeInsets.symmetric(
                             horizontal: 17, vertical: 5),
@@ -150,23 +170,22 @@ class _SubCardioPageState extends State<SubCardioPage> {
                                   ),
                                 ),
                               ),
-                              SizedBox(
-                                width: w * 0.1,
-                              ),
                               Expanded(
                                 child: Center(
-                                  child: Text(
-                                    "data",
-                                    style: GoogleFonts.teko(
-                                      textStyle: TextStyle(
-                                          color: Colors.white70,
-                                          fontSize: h * 0.040),
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: FittedBox(
+                                      child: Text(
+                                        string.cardio[index],
+                                        style: GoogleFonts.teko(
+                                          textStyle: TextStyle(
+                                              color: Colors.white70,
+                                              fontSize: h * 0.040),
+                                        ),
+                                      ),
                                     ),
                                   ),
                                 ),
-                              ),
-                              SizedBox(
-                                width: w * 0.126,
                               ),
                               Container(
                                 height: h * 0.11,
@@ -180,7 +199,7 @@ class _SubCardioPageState extends State<SubCardioPage> {
                                 ),
                                 child: Center(
                                   child: Text(
-                                    '1/0',
+                                    string.cardionumber[index],
                                     style: GoogleFonts.teko(
                                       textStyle: TextStyle(
                                           color: Colors.black,
@@ -200,6 +219,33 @@ class _SubCardioPageState extends State<SubCardioPage> {
             ),
           ],
         ),
+      ),
+      floatingActionButton: FutureBuilder<List<String>>(
+        future: imageUrls,
+        builder: (context, snapshot) {
+          if (snapshot.connectionState == ConnectionState.waiting) {
+            return Container(); // Return an empty container while loading
+          }
+          final List<String>? imageUrls = snapshot.data;
+          if (imageUrls == null) {
+            return Container(); // Handle the error state
+          }
+          return FloatingActionButton.extended(
+            onPressed: () => startTraining(
+              imageUrls,
+              string.cardio,
+              string.cardionumber,
+            ),
+            splashColor: Colors.grey,
+            label: Text(
+              'Let\'s start training',
+              style: GoogleFonts.teko(
+                textStyle: TextStyle(color: Colors.black, fontSize: h * 0.030),
+              ),
+            ),
+            backgroundColor: Colors.white,
+          );
+        },
       ),
     );
   }
