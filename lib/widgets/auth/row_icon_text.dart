@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:phantom/class/app_text/app_text_class.dart';
 
 class RowIconText extends StatelessWidget {
   const RowIconText({super.key, required this.h, required this.w, this.label});

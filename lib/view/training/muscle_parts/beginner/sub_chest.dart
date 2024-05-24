@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:phantom/data/service/storage/storage_service.dart';
 import 'package:phantom/pages/average/muscle_avarge.dart';
+import 'package:phantom/view/training/splash/training_splash.dart';
 
 class SubChestBeginner extends StatefulWidget {
   const SubChestBeginner({super.key});
@@ -18,6 +19,20 @@ class _SubChestBeginnerState extends State<SubChestBeginner> {
   void initState() {
     super.initState();
     imageUrls = StorageService.loadImages('chestbeginner');
+  }
+
+  void startTraining(List<String> imageUrls, List<String> exerciseNames,
+      List<String> exerciseNumbers) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => TrainStartView(
+          imageUrls: imageUrls,
+          exerciseNames: exerciseNames,
+          exerciseNumbers: exerciseNumbers,
+        ),
+      ),
+    );
   }
 
   @override
@@ -80,13 +95,16 @@ class _SubChestBeginnerState extends State<SubChestBeginner> {
                   );
                 }
                 final List<String>? imageUrls = snapshot.data;
+                if (imageUrls == null) {
+                  return const Center(child: Text('Error loading images'));
+                }
                 return SizedBox(
                   height: h * 0.65,
                   width: w,
                   child: ListView.builder(
-                    itemCount: imageUrls?.length ?? 0,
+                    itemCount: imageUrls.length,
                     itemBuilder: (context, index) {
-                      final imageUrl = imageUrls![index];
+                      final imageUrl = imageUrls[index];
                       return Padding(
                         padding: const EdgeInsets.symmetric(
                             horizontal: 17, vertical: 5),
@@ -136,25 +154,22 @@ class _SubChestBeginnerState extends State<SubChestBeginner> {
                                   ),
                                 ),
                               ),
-                              SizedBox(
-                                width: w * 0.02,
-                              ),
                               Expanded(
                                 child: Center(
-                                  child: FittedBox(
-                                    child: Text(
-                                      string.beginnerchest[index],
-                                      style: GoogleFonts.teko(
-                                        textStyle: TextStyle(
-                                            color: Colors.white,
-                                            fontSize: h * 0.040),
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: FittedBox(
+                                      child: Text(
+                                        string.beginnerchest[index],
+                                        style: GoogleFonts.teko(
+                                          textStyle: TextStyle(
+                                              color: Colors.white70,
+                                              fontSize: h * 0.040),
+                                        ),
                                       ),
                                     ),
                                   ),
                                 ),
-                              ),
-                              SizedBox(
-                                width: w * 0.02,
                               ),
                             ],
                           ),
@@ -167,6 +182,33 @@ class _SubChestBeginnerState extends State<SubChestBeginner> {
             ),
           ],
         ),
+      ),
+      floatingActionButton: FutureBuilder<List<String>>(
+        future: imageUrls,
+        builder: (context, snapshot) {
+          if (snapshot.connectionState == ConnectionState.waiting) {
+            return Container(); // Return an empty container while loading
+          }
+          final List<String>? imageUrls = snapshot.data;
+          if (imageUrls == null) {
+            return Container(); // Handle the error state
+          }
+          return FloatingActionButton.extended(
+            onPressed: () => startTraining(
+              imageUrls,
+              string.beginnerchest,
+              string.beginnerchestnumber,
+            ),
+            splashColor: Colors.grey,
+            label: Text(
+              'Let\'s start training',
+              style: GoogleFonts.teko(
+                textStyle: TextStyle(color: Colors.black, fontSize: h * 0.030),
+              ),
+            ),
+            backgroundColor: Colors.white70,
+          );
+        },
       ),
     );
   }

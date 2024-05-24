@@ -65,11 +65,19 @@ class _TrainStartViewState extends State<TrainStartView> {
     final currentExerciseNumber = widget.exerciseNumbers[currentExerciseIndex];
 
     return Scaffold(
+      // appBar: AppBar(
+      //   leading: IconButton(
+      //     onPressed: () {
+      //       Navigator.pop(context);
+      //     },
+      //     icon: const Icon(Icons.arrow_back_ios),
+      //   ),
+      // ),
       backgroundColor: Colors.black,
       body: Column(
         children: [
           SizedBox(
-            height: h * 0.6,
+            height: h * 0.57,
             width: w,
             child: ClipRRect(
               borderRadius: const BorderRadius.only(

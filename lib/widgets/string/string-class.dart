@@ -124,7 +124,6 @@ class StringClass {
     'Алмазние отжимание ',
     'Обратные отжимание',
     'Отжимание одной стороной',
-    'Прыжки',
   ];
   List<String> beginnerchestnumber = [
     '30 sec',
@@ -142,7 +141,6 @@ class StringClass {
     '8',
     '8',
     '10',
-    '30 sec',
   ];
   List<String> beginnerpressnumber = [
     '30 sec',
