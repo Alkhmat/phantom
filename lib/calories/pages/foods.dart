@@ -165,7 +165,7 @@ class _FoodKkalState extends State<FoodKkal> {
                           Column(
                             children: [
                               SizedBox(
-                                height: h * 0.09,
+                                height: h * 0.085,
                               ),
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
@@ -175,26 +175,26 @@ class _FoodKkalState extends State<FoodKkal> {
                                     style: IconButton.styleFrom(
                                         backgroundColor: Colors.black54,
                                         minimumSize:
-                                            Size(w * 0.065, h * 0.065)),
+                                            Size(w * 0.055, h * 0.055)),
                                     icon: Icon(
                                       Icons.add,
                                       color: Colors.white,
-                                      size: h * 0.05,
+                                      size: h * 0.045,
                                     ),
                                   ),
                                   SizedBox(
-                                    width: w * 0.02,
+                                    width: w * 0.015,
                                   ),
                                   IconButton(
                                     onPressed: onPressedRemovekkal,
                                     style: IconButton.styleFrom(
                                       backgroundColor: Colors.black54,
-                                      minimumSize: Size(w * 0.065, h * 0.065),
+                                      minimumSize: Size(w * 0.055, h * 0.055),
                                     ),
                                     icon: Icon(
                                       Icons.remove,
                                       color: Colors.white,
-                                      size: h * 0.05,
+                                      size: h * 0.045,
                                     ),
                                   ),
                                 ],

@@ -1,5 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:phantom/data/service/storage/storage_service.dart';
 
@@ -16,7 +17,7 @@ class _SubFullPageState extends State<SubFullPage> {
   @override
   void initState() {
     super.initState();
-    imageUrls = StorageService.loadImages('cardio');
+    imageUrls = StorageService.loadImages('full body');
   }
 
   @override
@@ -135,23 +136,21 @@ class _SubFullPageState extends State<SubFullPage> {
                                   ),
                                 ),
                               ),
-                              SizedBox(
-                                width: w * 0.1,
-                              ),
-                              Text(
-                                "data",
-                                style: GoogleFonts.teko(
-                                  textStyle: TextStyle(
-                                      color: Colors.white70,
-                                      fontSize: h * 0.040),
+                              Expanded(
+                                child: Center(
+                                  child: Text(
+                                    "data",
+                                    style: GoogleFonts.teko(
+                                      textStyle: TextStyle(
+                                          color: Colors.white70,
+                                          fontSize: h * 0.040),
+                                    ),
+                                  ),
                                 ),
-                              ),
-                              SizedBox(
-                                width: w * 0.126,
                               ),
                               Container(
                                 height: h * 0.11,
-                                width: w * 0.3,
+                                width: w * 0.2,
                                 decoration: const BoxDecoration(
                                   color: Colors.white30,
                                   borderRadius: BorderRadius.only(

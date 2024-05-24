@@ -111,7 +111,7 @@ class _SweetKkalState extends State<SweetKkal> {
                           Column(
                             children: [
                               SizedBox(
-                                height: h * 0.09,
+                                height: h * 0.085,
                               ),
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
@@ -119,24 +119,24 @@ class _SweetKkalState extends State<SweetKkal> {
                                   IconButton(
                                     onPressed: onPressedAddkkal,
                                     style: IconButton.styleFrom(
-                                        backgroundColor: Colors.white54),
+                                        backgroundColor: Colors.black54),
                                     icon: Icon(
                                       Icons.add,
-                                      color: Colors.black,
-                                      size: h * 0.05,
+                                      color: Colors.white,
+                                      size: h * 0.045,
                                     ),
                                   ),
                                   SizedBox(
-                                    width: w * 0.02,
+                                    width: w * 0.015,
                                   ),
                                   IconButton(
                                     onPressed: onPressedRemovekkal,
                                     style: IconButton.styleFrom(
-                                        backgroundColor: Colors.white54),
+                                        backgroundColor: Colors.black54),
                                     icon: Icon(
                                       Icons.remove,
-                                      color: Colors.black,
-                                      size: h * 0.05,
+                                      color: Colors.white,
+                                      size: h * 0.045,
                                     ),
                                   ),
                                 ],

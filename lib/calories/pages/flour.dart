@@ -121,7 +121,7 @@ class _FLourKkalState extends State<FLourKkal> {
                           Column(
                             children: [
                               SizedBox(
-                                height: h * 0.09,
+                                height: h * 0.085,
                               ),
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
@@ -133,18 +133,18 @@ class _FLourKkalState extends State<FLourKkal> {
                                     icon: Icon(
                                       Icons.add,
                                       color: Colors.white,
-                                      size: h * 0.05,
+                                      size: h * 0.045,
                                     ),
                                   ),
                                   SizedBox(
-                                    width: w * 0.02,
+                                    width: w * 0.015,
                                   ),
                                   IconButton(
                                     onPressed: onPressedRemovekkal,
                                     style: IconButton.styleFrom(
                                         backgroundColor: Colors.black54),
                                     icon: Icon(Icons.remove,
-                                        color: Colors.white, size: h * 0.05),
+                                        color: Colors.white, size: h * 0.045),
                                   ),
                                 ],
                               ),
