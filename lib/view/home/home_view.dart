@@ -10,6 +10,7 @@ import 'package:phantom/pages/more.dart';
 import 'package:phantom/view/auth/register/register_viuw.dart';
 import 'package:phantom/view/calories/kkal_view.dart';
 import 'package:phantom/view/save/save_view.dart';
+import 'package:phantom/view/setting/setting_view.dart';
 import 'package:phantom/widgets/string/string-class.dart';
 
 class HomeView extends StatefulWidget {
@@ -117,6 +118,13 @@ class _HomeViewState extends State<HomeView> {
                               context,
                               MaterialPageRoute(
                                 builder: (context) => const RegisterView(),
+                              ),
+                            );
+                          } else if (index == 3) {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const SettingView(),
                               ),
                             );
                           }

@@ -54,10 +54,14 @@ class StringClass {
     'Sweet',
     'Meat',
   ];
-  List<dynamic> icon1 = [
+  List<String> settings = [
+    "Theme",
+  ];
+  List<String> icon1 = [
     'assets/images/2.png',
     'assets/images/3.png',
     'assets/images/user.png',
+    'assets/images/s.png',
   ];
   List<String> assets2 = [
     'assets/images/8.jpg',

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'dart:math';
@@ -104,11 +105,14 @@ class _TrainStartViewState extends State<TrainStartView> {
           ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 20),
-            child: FittedBox(
-              child: Text(
-                currentExerciseName,
-                style: GoogleFonts.teko(
-                  textStyle: TextStyle(color: Colors.white, fontSize: h * 0.05),
+            child: Center(
+              child: FittedBox(
+                child: Text(
+                  currentExerciseName,
+                  style: GoogleFonts.teko(
+                    textStyle:
+                        TextStyle(color: Colors.white, fontSize: h * 0.05),
+                  ),
                 ),
               ),
             ),
@@ -118,22 +122,25 @@ class _TrainStartViewState extends State<TrainStartView> {
               child: Text(
                 currentExerciseNumber,
                 style: GoogleFonts.teko(
-                  textStyle: TextStyle(color: Colors.white, fontSize: h * 0.04),
+                  textStyle: TextStyle(color: Colors.white, fontSize: h * 0.07),
                 ),
               ),
             ),
           ),
           Padding(
-            padding: const EdgeInsets.symmetric(vertical: 15),
+            padding: const EdgeInsets.symmetric(vertical: 5),
             child: ElevatedButton(
               onPressed: showNextExercise,
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.white70,
                 minimumSize: Size(w * 0.8, h * 0.07),
               ),
-              child: const Text(
-                'Next',
-                style: TextStyle(color: Colors.black),
+              child: Text(
+                'Next exersize',
+                style: GoogleFonts.teko(
+                  textStyle:
+                      TextStyle(color: Colors.black, fontSize: h * 0.040),
+                ),
               ),
             ),
           ),
