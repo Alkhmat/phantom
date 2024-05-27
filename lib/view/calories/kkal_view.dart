@@ -31,7 +31,7 @@ class _KkalViewState extends State<KkalView> {
   List<Widget> subkkalpage = [
     const FoodKkal(),
     const BevergesKkal(),
-    const FLourKkal(),
+    const FlourKkal(),
     const FastFoodKkal(),
     const VegetablesKkal(),
     const FruitsKkal(),

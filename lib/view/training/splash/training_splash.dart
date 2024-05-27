@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'dart:math';
-
-import 'package:phantom/view/home/home_view.dart';
+import 'package:phantom/view/training/over-view/over_view.dart';
 
 class TrainStartView extends StatefulWidget {
   final List<String> imageUrls;
@@ -23,9 +21,8 @@ class TrainStartView extends StatefulWidget {
 }
 
 class _TrainStartViewState extends State<TrainStartView> {
+  late final List<int> exerciseOrder;
   int currentIndex = 0;
-  late List<int> exerciseOrder;
-  final Random random = Random();
 
   @override
   void initState() {
@@ -34,26 +31,25 @@ class _TrainStartViewState extends State<TrainStartView> {
   }
 
   List<int> _generateExerciseOrder(int length) {
-    // Create a list where each index appears twice
+    final random = Random();
     List<int> order = List.generate(length * 2, (index) => index % length);
     order.shuffle(random);
     return order;
   }
 
-  void showNextExercise() {
-    setState(() {
-      if (currentIndex < exerciseOrder.length - 1) {
+  void _showNextExercise() {
+    if (currentIndex < exerciseOrder.length - 1) {
+      setState(() {
         currentIndex++;
-      } else {
-        // Navigate to HomeView when all exercises are done
-        Navigator.pushReplacement(
-          context,
-          MaterialPageRoute(
-            builder: (context) => const HomeView(),
-          ),
-        );
-      }
-    });
+      });
+    } else {
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(
+          builder: (context) => const OverTrainView(),
+        ),
+      );
+    }
   }
 
   @override
@@ -66,14 +62,6 @@ class _TrainStartViewState extends State<TrainStartView> {
     final currentExerciseNumber = widget.exerciseNumbers[currentExerciseIndex];
 
     return Scaffold(
-      // appBar: AppBar(
-      //   leading: IconButton(
-      //     onPressed: () {
-      //       Navigator.pop(context);
-      //     },
-      //     icon: const Icon(Icons.arrow_back_ios),
-      //   ),
-      // ),
       backgroundColor: Colors.black,
       body: Column(
         children: [
@@ -128,15 +116,15 @@ class _TrainStartViewState extends State<TrainStartView> {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.symmetric(vertical: 5),
+            padding: const EdgeInsets.all(15),
             child: ElevatedButton(
-              onPressed: showNextExercise,
+              onPressed: _showNextExercise,
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.white70,
                 minimumSize: Size(w * 0.8, h * 0.07),
               ),
               child: Text(
-                'Next exersize',
+                'Next exercise',
                 style: GoogleFonts.teko(
                   textStyle:
                       TextStyle(color: Colors.black, fontSize: h * 0.040),

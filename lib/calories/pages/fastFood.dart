@@ -44,7 +44,7 @@ class _FastFoodKkalState extends State<FastFoodKkal> {
               width: w,
               child: GridView.builder(
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 3,
+                  crossAxisCount: 2,
                 ),
                 itemCount: imageUrls?.length ?? 0,
                 itemBuilder: (context, index) {
@@ -151,7 +151,7 @@ class _FastFoodKkalState extends State<FastFoodKkal> {
                           Column(
                             children: [
                               SizedBox(
-                                height: h * 0.085,
+                                height: h * 0.14,
                               ),
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
@@ -163,11 +163,11 @@ class _FastFoodKkalState extends State<FastFoodKkal> {
                                     icon: Icon(
                                       Icons.add,
                                       color: Colors.white,
-                                      size: h * 0.045,
+                                      size: h * 0.06,
                                     ),
                                   ),
                                   SizedBox(
-                                    width: w * 0.015,
+                                    width: w * 0.025,
                                   ),
                                   IconButton(
                                     onPressed: onPressedRemovekkal,
@@ -176,7 +176,7 @@ class _FastFoodKkalState extends State<FastFoodKkal> {
                                     icon: Icon(
                                       Icons.remove,
                                       color: Colors.white,
-                                      size: h * 0.045,
+                                      size: h * 0.06,
                                     ),
                                   ),
                                 ],

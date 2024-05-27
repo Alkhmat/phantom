@@ -45,7 +45,7 @@ class _FoodKkalState extends State<FoodKkal> {
               width: w,
               child: GridView.builder(
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 3,
+                  crossAxisCount: 2,
                 ),
                 itemCount: imageUrls?.length ?? 0,
                 itemBuilder: (context, index) {
@@ -165,7 +165,7 @@ class _FoodKkalState extends State<FoodKkal> {
                           Column(
                             children: [
                               SizedBox(
-                                height: h * 0.085,
+                                height: h * 0.14,
                               ),
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
@@ -173,28 +173,26 @@ class _FoodKkalState extends State<FoodKkal> {
                                   IconButton(
                                     onPressed: onPressedAddkkal,
                                     style: IconButton.styleFrom(
-                                        backgroundColor: Colors.black54,
-                                        minimumSize:
-                                            Size(w * 0.055, h * 0.055)),
+                                      backgroundColor: Colors.black54,
+                                    ),
                                     icon: Icon(
                                       Icons.add,
                                       color: Colors.white,
-                                      size: h * 0.045,
+                                      size: h * 0.06,
                                     ),
                                   ),
                                   SizedBox(
-                                    width: w * 0.015,
+                                    width: w * 0.025,
                                   ),
                                   IconButton(
                                     onPressed: onPressedRemovekkal,
                                     style: IconButton.styleFrom(
                                       backgroundColor: Colors.black54,
-                                      minimumSize: Size(w * 0.055, h * 0.055),
                                     ),
                                     icon: Icon(
                                       Icons.remove,
                                       color: Colors.white,
-                                      size: h * 0.045,
+                                      size: h * 0.06,
                                     ),
                                   ),
                                 ],

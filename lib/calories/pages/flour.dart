@@ -4,14 +4,14 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:phantom/data/cubits/calories/kkal/kkal_cubit.dart';
 import 'package:phantom/data/service/storage/storage_service.dart';
 
-class FLourKkal extends StatefulWidget {
-  const FLourKkal({super.key});
+class FlourKkal extends StatefulWidget {
+  const FlourKkal({super.key});
 
   @override
-  State<FLourKkal> createState() => _FLourKkalState();
+  State<FlourKkal> createState() => _FlourKkalState();
 }
 
-class _FLourKkalState extends State<FLourKkal> {
+class _FlourKkalState extends State<FlourKkal> {
   late Future<List<String>> imageUrls;
 
   @override
@@ -44,7 +44,7 @@ class _FLourKkalState extends State<FLourKkal> {
               width: w,
               child: GridView.builder(
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 3,
+                  crossAxisCount: 2,
                 ),
                 itemCount: imageUrls?.length ?? 0,
                 itemBuilder: (context, index) {
@@ -121,7 +121,7 @@ class _FLourKkalState extends State<FLourKkal> {
                           Column(
                             children: [
                               SizedBox(
-                                height: h * 0.085,
+                                height: h * 0.14,
                               ),
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
@@ -133,18 +133,18 @@ class _FLourKkalState extends State<FLourKkal> {
                                     icon: Icon(
                                       Icons.add,
                                       color: Colors.white,
-                                      size: h * 0.045,
+                                      size: h * 0.06,
                                     ),
                                   ),
                                   SizedBox(
-                                    width: w * 0.015,
+                                    width: w * 0.025,
                                   ),
                                   IconButton(
                                     onPressed: onPressedRemovekkal,
                                     style: IconButton.styleFrom(
                                         backgroundColor: Colors.black54),
                                     icon: Icon(Icons.remove,
-                                        color: Colors.white, size: h * 0.045),
+                                        color: Colors.white, size: h * 0.06),
                                   ),
                                 ],
                               ),

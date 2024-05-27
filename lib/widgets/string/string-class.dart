@@ -94,40 +94,40 @@ class StringClass {
     'assets/images/112.jpg',
   ];
   List<String> beginnerchest = [
-    'Разминка',
-    'Алмазные отж-ния от колен',
-    'Х отжимание',
-    'отжимание от брусья',
-    'отжимание от поверхности',
-    'Растяжка грудных',
+    'Warm-up',
+    'Diamond push-ups from the knees',
+    'X push-up',
+    'bar push-up',
+    'push-up from the surface',
+    'Pectoral stretch',
   ];
   List<String> beginnerleg = [
-    'Американские шаги',
-    'Прыжки с выправлением  руки',
-    'приседание с скурчиванием  стоя',
-    'балгарские приседание',
-    'балгарские приседание от скамьи',
-    'Растяжка грудных',
+    'American steps',
+    'Jumping with arm straightening',
+    'Standing curl squat',
+    'Bulgarian squats',
+    'Bulgarian bench squats',
+    'Chest stretch',
   ];
   List<String> beginnerpress = [
-    'Планка',
-    'Скручивание стоя',
-    'Интенсивная скр-ние стоя',
-    'Боксерские скручивание',
-    'Интенсивные прышки ',
-    'Растяжка тело',
-    'Противоположные разведение ',
-    'Скручивание лягушки',
-    'Боковые скручивание',
+    'Plank',
+    'Standing crunch',
+    'Intensive standing exercise',
+    'Boxing crunch',
+    'Intense jumping',
+    'Body stretching',
+    'Opposite breeding',
+    'Twisting frog',
+    'Lateral twist',
   ];
   List<String> avaragechest = [
-    'Алмазные отж-ния от колен',
-    'Х-отжимание',
-    'Индийсике отжимание',
-    'Отжимание от поверхности ',
-    'Алмазние отжимание ',
-    'Обратные отжимание',
-    'Отжимание одной стороной',
+    'Diamond push-ups from the knees',
+    'X-push-up',
+    'Indian push-ups',
+    'Surface push-ups',
+    'Diamond push-up',
+    'Reverse push-ups',
+    'One-sided push-up',
   ];
   List<String> beginnerchestnumber = [
     '30 sec',
@@ -170,23 +170,23 @@ class StringClass {
   ];
   List<String> beginnerlegnumber = ['12', '15', '15', '16', '10'];
   List<String> avarageleg = [
-    'Американские шаги',
-    'Приседание с скручиванием\n стоя',
-    'Балгарские приседание',
-    'Приседание с весом',
-    'балгарские приседание от скамьи',
-    'Приседание с прыжками',
-    'Бег на месте',
-    'Болгарские сплит-приседания',
+    'American Steps',
+    'Squat crunch standing',
+    'Bulgarian squats',
+    'Squat with weight',
+    'Bulgarian bench squats',
+    'Squat with jumps',
+    'Running in place',
+    'Bulgarian split squats',
   ];
   List<String> avaragepress = [
-    'Планка',
-    'Приседание с скручиванием стоя',
-    'Боксерские скручивание',
-    'Противоположные разведение',
-    'Русский твист',
-    'Боковые скручивание',
-    'Скручивание на одну'
+    'Plank',
+    'Standing Squat Crunch',
+    'Boxing crunch',
+    'Opposite breeding',
+    'Russian twist',
+    'Lateral twisting',
+    'Twisting by one'
   ];
   List<String> avaragepressnumber = [
     '30 sec',
@@ -198,15 +198,15 @@ class StringClass {
     '10',
   ];
   List<String> experiencechest = [
-    'Отжимание с касанием ноги',
-    'Обратные отжимание',
-    'ОТжимание с хлопком',
-    'Узкие отжимание',
-    'Алмазные отжимание',
-    'Х-отжимание',
-    'Отжимание на одну',
-    'Отжимание от скамьи',
-    'Растяжка грудных',
+    'Push-up with foot touch',
+    'Reverse push-ups',
+    'Push-up with clap',
+    'Narrow push-ups',
+    'Diamond push-ups',
+    'X-push-up',
+    'One push-up'
+        'Bench push-ups',
+    'Pectoral stretch',
   ];
   List<String> experiencechestnumber = [
     '10',
@@ -221,13 +221,13 @@ class StringClass {
     '30 sec',
   ];
   List<String> experienceleg = [
-    'Американские шаги',
-    'Прыжки с выпадами',
-    'Балгарские приседание',
-    'Приседание с весом',
-    'Балгарские приседание от скамьи',
-    'Болгарские сплит-приседания',
-    'Прыжки из приседа',
+    'American Steps',
+    'Jumping with lunges',
+    'Bulgarian squats',
+    'Squat with weight',
+    'Bulgarian bench squats',
+    'Bulgarian split squats',
+    'Squat Jumps',
   ];
   List<String> experiencelegnumber = [
     '14',
@@ -239,14 +239,14 @@ class StringClass {
     '8',
   ];
   List<String> experiencepress = [
-    'Планка',
-    'Приседание с скручиванием стоя',
-    'Боксерские скручивание',
-    'Растяжка кошка-корова',
-    'Скручивание лягушки',
-    'Русский твист',
-    'Боковые скурчивание',
-    'Скучивание на одну'
+    'Plank',
+    'Standing Squat Crunch',
+    'Boxing crunch',
+    'Cat-cow stretch',
+    'Twisting frog',
+    'Russian twist',
+    'Lateral curling',
+    'Crowded by one'
   ];
   List<String> experiencepressnumber = [
     '30 sec',
@@ -259,16 +259,17 @@ class StringClass {
     '12',
   ];
   List<String> cardio = [
-    'Шаги на месте с высоким\n        подниманием коленей',
-    'Прыжки с разведением рук и ног',
-    'Приседание с скручиванием стоя',
-    'Отжимание для косых',
-    'Интенсивные прыжки',
-    'Индийские отжимание',
-    'Балгарские приседание\n          с выпригиванием',
-    'Растяжка кошка-корова',
-    'Прыжки с на месте',
-    'Бег на месте',
+    '''Steps in place with high
+           knees raised''',
+    'Jumping with arms and legs spread',
+    'Standing Squat Crunch',
+    'Push-ups for obliques',
+    'Intense Jumping',
+    'Indian push-ups',
+    'Bulgarian squats   with arching',
+    'Cat-cow stretch',
+    'Jumping in place',
+    'Running in place',
   ];
   List<String> cardionumber = [
     '24',
@@ -297,17 +298,17 @@ class StringClass {
     '20',
   ];
   List<String> fullbody = [
-    'Отжимание с сгибанием',
-    'Планка',
-    'Боксерские скручивание',
-    'Приседание с скручиванием стоя',
-    'Обратные отжимание\n               от скамиьи',
-    'Приседание с весом',
-    'Интенсивные прыжки',
-    'Балгарские приседание от скамьи',
-    'Отжимание от брусья',
-    'Противоположные разведение',
-    'Скручивание лягушки',
-    'Отжимание от скамьи',
+    'Push-up with bending',
+    'Plank',
+    'Boxing crunch',
+    'Standing Squat Crunch',
+    'Reverse push-ups\n from a bench',
+    'Squat with weight',
+    'Intense Jumping',
+    'Bulgarian bench squats',
+    'Bar push-ups',
+    'Opposite breeding',
+    'Twisting frog',
+    'Bench push-ups',
   ];
 }

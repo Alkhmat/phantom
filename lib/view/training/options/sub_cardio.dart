@@ -82,7 +82,46 @@ class _SubCardioPageState extends State<SubCardioPage> {
                             await showDialog(
                               context: context,
                               builder: (context) {
-                                return const AlertDialog();
+                                return AlertDialog(
+                                  backgroundColor: Colors.white,
+                                  title: Text(
+                                    'Explanation',
+                                    style: GoogleFonts.teko(
+                                      textStyle: TextStyle(
+                                          color: Colors.black,
+                                          fontSize: h * 0.045,
+                                          fontWeight: FontWeight.normal),
+                                    ),
+                                  ),
+                                  content: Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: Text(
+                                      ''' Here the exercises will always \n work out differently because in \nthis way we are trying to give the\n load to different parts of the body\n equally and in this case you will\n get less tired and your body will\n focus more cells on your muscles\n and this way you get more pump from the exercise''',
+                                      style: GoogleFonts.teko(
+                                        textStyle: TextStyle(
+                                            color: Colors.black,
+                                            fontSize: h * 0.03,
+                                            fontWeight: FontWeight.w500),
+                                      ),
+                                    ),
+                                  ),
+                                  actions: [
+                                    TextButton(
+                                      onPressed: () {
+                                        Navigator.pop(context);
+                                      },
+                                      child: Text(
+                                        'let\'s get started',
+                                        style: GoogleFonts.teko(
+                                          textStyle: TextStyle(
+                                              color: Colors.black,
+                                              fontSize: h * 0.03,
+                                              fontWeight: FontWeight.normal),
+                                        ),
+                                      ),
+                                    )
+                                  ],
+                                );
                               },
                             );
                           },

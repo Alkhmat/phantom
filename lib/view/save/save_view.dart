@@ -1,7 +1,10 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:phantom/class/app_text/app_text_class.dart';
+import 'package:phantom/view/home/home_view.dart';
 
 class SaveViuw extends StatelessWidget {
   const SaveViuw({super.key});
@@ -15,7 +18,12 @@ class SaveViuw extends StatelessWidget {
       appBar: AppBar(
         leading: IconButton(
           onPressed: () {
-            Navigator.pop(context);
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const HomeView(),
+              ),
+            );
           },
           icon: const Icon(
             Icons.arrow_back_ios,
@@ -122,7 +130,7 @@ class SaveViuw extends StatelessWidget {
           .doc(documentId)
           .delete();
     } catch (e) {
-      print('Error deleting document: $e');
+      log('Error deleting document: $e');
       // Возможно, стоит добавить здесь обработку ошибок, если удаление не удалось
     }
   }

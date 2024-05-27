@@ -10,7 +10,7 @@ import 'package:phantom/data/cubits/click_auth/clickAuth_cubit.dart';
 import 'package:phantom/data/cubits/photo_pickers/image_cubit.dart';
 import 'package:phantom/data/cubits/tap/tap_cubit.dart';
 import 'package:phantom/firebase_options.dart';
-import 'package:phantom/view/setting/setting_view.dart';
+import 'package:phantom/view/home/home_view.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -54,7 +54,7 @@ class Phantom extends StatelessWidget {
       ],
       child: const MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: SettingView(),
+        home: HomeView(),
       ),
     );
   }
